@@ -14,6 +14,21 @@ Os hashes do dia são ordenados **pelo próprio hash**, não por id nem por data
 sistema que os escreveu, o hash não. O formato canónico do evento e o verificador de referência
 estão em `prompts/handoff/hash-chain-contract.md` do repositório do produto.
 
+## Que cadeias estão aqui, e quais não estão
+
+Ficheiro | cadeia | publicada desde
+---|---|---
+`roots/dflorahubai-audit.jsonl` | cadeia de auditoria do FloraCore (dflorahubai) | 2026-09-05
+
+**Não está aqui a cadeia de lote do cbiotec-d.** Isso é ausência, não descuido: ela existe e ainda
+não publica raiz nenhuma fora da sua base. Quem lê de fora não tem como distinguir as duas coisas, e
+por isso esta secção existe — uma lista que não diz o que falta convida o leitor a assumir que está
+tudo cá.
+
+Consequência prática para quem escreve páginas: **«a raiz do dia» não identifica nada enquanto
+houver mais do que uma cadeia.** Uma página que afirme publicação externa tem de dizer de que cadeia
+fala, e verificar nesta tabela se essa cadeia está mesmo aqui.
+
 ## Como se usa isto
 
 Quem tiver acesso aos dados recomputa a raiz de um dia e compara com a linha publicada. Se não
