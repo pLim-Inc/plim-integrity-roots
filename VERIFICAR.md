@@ -27,6 +27,29 @@ deste repositório é append-only e datado pelo GitHub, e o ramo está protegido
 apagamento. Compare a linha de um dia com a que viu ontem — ou com a que outra pessoa tenha
 guardado.
 
+## Carimbo de tempo independente (`stamps/`)
+
+Cada raiz publicada é também carimbada em calendários OpenTimestamps, que ancoram um hash na
+blockchain do Bitcoin. Ninguém aqui controla esses calendários nem essa blockchain.
+
+```
+ots verify stamps/dflorahubai-audit-2026-09-04.root.ots
+```
+
+O ficheiro `.root` tem a raiz desse dia e o `.ots` é a prova. Se alterar um único carácter do
+`.root`, o cliente responde **`File does not match original!`** — medido.
+
+Um carimbo acabado de fazer diz **`Pending confirmation in Bitcoin blockchain`**: é uma promessa dos
+calendários que se torna âncora algumas horas depois. A publicação seguinte completa-a. Dizer
+«pendente» enquanto está pendente é a razão de existir este parágrafo — um carimbo que se
+anunciasse como prova antes de o ser valeria menos do que não existir.
+
+**Porque é que isto importa mais do que parece:** publicar a raiz noutro sítio defende contra quem
+tem a credencial da base de dados. Não defende contra conluio entre quem escreve os dados e quem
+publica a raiz. Para esse caso é preciso um terceiro que date de forma independente, e é isto. Um
+carimbo prova que um valor **existiu** antes de um momento; não preserva o valor — isso é o que faz
+um segundo destino. As duas coisas não se substituem.
+
 ## O que isto garante, e o que não garante
 
 **Garante** contra quem tem a credencial da base de dados. Essa pessoa reescreve as linhas **e**
