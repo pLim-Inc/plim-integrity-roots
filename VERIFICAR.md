@@ -22,10 +22,28 @@ saído daqui.
 
 ## Se não tem acesso aos dados
 
-Ainda consegue verificar uma coisa útil: que esta série nunca foi reescrita. O histórico de commits
-deste repositório é append-only e datado pelo GitHub, e o ramo está protegido contra reescrita e
-apagamento. Compare a linha de um dia com a que viu ontem — ou com a que outra pessoa tenha
-guardado.
+Consegue verificar **duas** coisas, e é importante saber quais são, porque não são a coisa toda.
+
+**1. Que a série encadeia consigo própria.** Cada linha traz o `prev_root` do dia anterior, portanto
+pode recomputar o elo inteiro no seu próprio computador, sem falar connosco. Uma raiz antiga alterada
+parte todas as seguintes.
+
+**2. Que a série nunca foi reescrita.** O histórico de commits deste repositório é append-only e
+datado pelo GitHub, e o ramo está protegido contra reescrita e apagamento. Compare a linha de um dia
+com a que viu ontem, ou com a que outra pessoa guardou.
+
+**O que NÃO consegue verificar só com este ficheiro**, e dizê-lo é o ponto: que a raiz de um dia
+cobre **de facto** os eventos desse dia. A regra é
+`root(dia) = sha256(root(anterior) || concat(hashes dos eventos do dia))`, e os hashes dos eventos
+não estão publicados aqui. Sem eles, prova-se que **a série de raízes é consistente consigo própria**
+— não que cada raiz corresponde ao que aconteceu na base nesse dia. Para essa metade é preciso
+acesso aos dados, ou que passemos a publicar os hashes de cada dia, o que tem um custo de privacidade
+que ainda não foi decidido.
+
+Uma página que diga «a cadeia de auditoria está verificada» a partir deste ficheiro está a afirmar
+mais do que o ficheiro suporta. O que ele suporta é: **esta série publicada fora da base encadeia, e
+verifiquei-o eu mesmo.** *(Fronteira apontada pela lane da consola, 05/09/2026, antes de a página
+anunciar a versão forte.)*
 
 ## Carimbo de tempo independente (`stamps/`)
 
