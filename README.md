@@ -16,18 +16,17 @@ estão em `prompts/handoff/hash-chain-contract.md` do repositório do produto.
 
 ## Que cadeias estão aqui, e quais não estão
 
-Ficheiro | cadeia | publicada desde
----|---|---
-`roots/dflorahubai-audit.jsonl` | cadeia de auditoria do FloraCore (dflorahubai) | 2026-09-05
+| ficheiro | cadeia | primeiro dia publicado |
+|---|---|---|
+| `roots/dflorahubai-audit.jsonl` | `dflorahubai-audit` | 2026-09-03 |
 
-**Não está aqui a cadeia de lote do cbiotec-d.** Isso é ausência, não descuido: ela existe e ainda
-não publica raiz nenhuma fora da sua base. Quem lê de fora não tem como distinguir as duas coisas, e
-por isso esta secção existe — uma lista que não diz o que falta convida o leitor a assumir que está
-tudo cá.
+Esta tabela é gerada a partir do que está mesmo nesta pasta. **Uma cadeia que não apareça aqui não
+publica raiz nenhuma fora da sua base** — e isso é ausência, não descuido. Quem lê de fora não tem
+como distinguir as duas coisas, por isso está escrito.
 
-Consequência prática para quem escreve páginas: **«a raiz do dia» não identifica nada enquanto
-houver mais do que uma cadeia.** Uma página que afirme publicação externa tem de dizer de que cadeia
-fala, e verificar nesta tabela se essa cadeia está mesmo aqui.
+Consequência para quem escreve páginas: **«a raiz do dia» não identifica nada enquanto houver mais
+do que uma cadeia na casa.** Uma página que afirme publicação externa tem de dizer de que cadeia
+fala e confirmar nesta tabela que essa cadeia está mesmo aqui.
 
 ## Como se usa isto
 
